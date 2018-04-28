@@ -1,3 +1,17 @@
 .header{
-    background: black;
+  flex-basis: 940px;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
+    .logo{
+    margin: auto 0;
+    margin-right: auto;
+    }
+    &__do-order{
+      margin-left: 15px;
+    }
 }
+
+

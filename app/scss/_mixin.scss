@@ -1,0 +1,15 @@
+@mixin circle($width){
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin rem($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
