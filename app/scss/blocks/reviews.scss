@@ -7,7 +7,6 @@
     margin-bottom: 9%;
   }
   &__text{
-    font-family: 'Ubuntu';
     font-weight: lighter;
     line-height: 1.5;
     @include rem(14px);
@@ -22,7 +21,6 @@
     background: #777;
     width: 25%;
     height: 50%;
-    background-image: url('../img/reviews-img2.jpg');
     background-position: center;
     background-size: cover;
     filter: grayscale(100%);
