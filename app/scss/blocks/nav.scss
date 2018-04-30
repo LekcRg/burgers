@@ -1,0 +1,41 @@
+.header__nav{
+  display: inline-flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  &-item{
+    margin: auto 0;
+    &::before{
+      content: '•';
+      color: #fff;
+      margin-left: 15px;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+    &:first-child::before{
+      display: none;
+    }
+  }
+  &-link{
+    font-family: 'Ubuntu';
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    @include rem(13px);
+    font-weight: bold;
+    text-decoration: none;
+    transition: border-bottom 1s ease-out; 
+    &::after{
+      left: 0;bottom: 0;right: 0;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+    &:hover::after{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.points{
+  position: fixed;
+  top: 90px;
+  right: 50px;
+  list-style-type: none;
+  &__dot{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    transition: border .2s ease-out;
+    &:hover{
+      border: 1px solid #fff;
+    }
+  }
+  &__active{
+    border: 1px solid #fff;
+  }
+  &__link{
+    display: block;
+    padding: 4px;
+    border-radius: 50%;
+    &::before{
+      content: '';
+      @include circle(6px);
+      display: block;
+      background: #fff;
+    }
+  }
+}

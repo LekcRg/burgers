@@ -1,0 +1,55 @@
+.reviews{
+  flex-wrap: wrap;
+  &__name{
+    padding-top: 15%;
+    font-family: 'Gagalin';
+    font-weight: normal;
+    margin-bottom: 9%;
+  }
+  &__text{
+    font-weight: lighter;
+    line-height: 1.5;
+    @include rem(14px);
+    margin-bottom: 17px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    opacity: 1;
+    background: #777;
+    width: 25%;
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    &-wrapper{
+      padding: 0 6%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#454545, .6);
+      opacity: 0;
+      transition: opacity .3s ease-out;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    &-text{
+      color: #fff;
+    }
+  }
+  &__btn{
+    display: inline-flex;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    background: #2f3234;
+    padding: 13px 15px;
+    border-radius: 5px;
+    transition: background .2s ease-out;
+    &:hover{
+      background: darken(#2f3234, 5%);
+    }
+  }
+}
