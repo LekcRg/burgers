@@ -19,6 +19,7 @@
   &__item{
     display: flex;
     flex-direction: column;
+    flex: 1;
     @include phones {
       flex-direction: row;
       margin-bottom: rem(25px);
@@ -64,8 +65,11 @@
     width: 100px;
     &-wrapper {
       margin: 0 auto;
+      height: 90px;
+      margin-bottom: rem(20px);
       @include phones{
         width: 30%;
+        margin-bottom: 0;
       }
     }
   }
