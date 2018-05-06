@@ -1,0 +1,35 @@
+.footer{
+  height: 58px;
+  width: 100%;
+  background-image: url(../img/footer-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__container{
+    justify-content: flex-start;
+  }
+  &__text{
+    width: 50%;
+  }
+  &__address{
+    color: #fff;
+    font-size: rem(14px);
+  }
+  &__tel{
+    color: $orange;
+    font-weight: bold;
+    font-size: rem(14px);
+    display: flex;
+    align-items: center;
+    &::before{
+      content: '';
+      width: 12px;
+      height: 11px;
+      background-image: url(../img/icons/phone.svg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-right: rem(8px);
+    }
+  }
+}

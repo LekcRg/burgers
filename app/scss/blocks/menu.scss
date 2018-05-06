@@ -1,0 +1,85 @@
+.menu{
+  background-image: url(../img/menu-bg.jpg);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  &__text{
+    color: #fff;
+    font-size: rem(14px);
+    padding: 10% 5%;
+    line-height: 1.8;
+  }
+  &__list{
+    display: flex;
+    z-index: 2;
+    margin-left: auto;
+  }
+  &__item{
+    height: 100%;
+    display: flex;
+    &-active{
+      & .menu__item-title{
+        color: $orange;
+      }
+      & .menu__text-wrapper{
+        width: 550px;
+        @include tablets{
+          width: auto;
+          flex: 1;
+        }
+      }
+    }
+  }
+  &__title{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  &__item-title{
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Gagalin';
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    padding: rem(50px) 0 0 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+  &__item-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:before{
+      position: absolute;
+      top: 0;left: 0;right: 0;bottom: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#141414, .7);
+    }
+  }
+  &__text-wrapper{
+    overflow: hidden;
+    height: 100%;
+    width: 0;
+    background-color: rgba($black, .93);
+  }
+}
+
+
+.item-meet{
+  background-image: url(../img/menu/1.jpg);
+}
+.item-grass{
+  background-image: url(../img/menu/2.jpg);
+}
+.item-feet{
+  background-image: url(../img/menu/3.jpg);
+}

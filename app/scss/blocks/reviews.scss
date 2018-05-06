@@ -5,12 +5,19 @@
     font-family: 'Gagalin';
     font-weight: normal;
     margin-bottom: 9%;
+    @include phones{
+      font-size: rem(24px);
+      padding: 0;
+    }
   }
   &__text{
     font-weight: lighter;
     line-height: 1.5;
-    @include rem(14px);
+    font-size: rem(14px);
     margin-bottom: 17px;
+    @include phones {
+      display: none;
+    }
   }
   &__list{
     display: flex;
@@ -24,6 +31,10 @@
     background-position: center;
     background-size: cover;
     filter: grayscale(100%);
+    @include tablets{
+      width: 50%;
+      height: 25%;
+    }
     &-wrapper{
       padding: 0 6%;
       width: 100%;
@@ -34,9 +45,16 @@
       &:hover{
         opacity: 1;
       }
+      @include phones{
+        display: flex;
+        align-items: center;
+      }
     }
     &-text{
       color: #fff;
+      @include tablets{
+        text-align: center;
+      }
     }
   }
   &__btn{
@@ -44,12 +62,12 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-    background: #2f3234;
+    background: $black;
     padding: 13px 15px;
     border-radius: 5px;
     transition: background .2s ease-out;
     &:hover{
-      background: darken(#2f3234, 5%);
+      background: darken($black, 5%);
     }
   }
 }

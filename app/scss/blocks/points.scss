@@ -3,6 +3,9 @@
   top: 90px;
   right: 50px;
   list-style-type: none;
+  @include tablets{
+    display: none;
+  }
   &__dot{
     border: 1px solid transparent;
     border-radius: 50%;
@@ -21,7 +24,9 @@
     border-radius: 50%;
     &::before{
       content: '';
-      @include circle(6px);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
       display: block;
       background: #fff;
     }

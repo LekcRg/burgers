@@ -2,6 +2,8 @@
 
 @import "mixin";
 
+@import "variables";
+
 @import "blocks/base";
 
 @import "blocks/points";
@@ -19,3 +21,11 @@
 @import "blocks/reviews";
 
 @import "blocks/team";
+
+@import "blocks/menu";
+
+@import "blocks/form";
+
+@import "blocks/footer";
+
+@import "blocks/geo";

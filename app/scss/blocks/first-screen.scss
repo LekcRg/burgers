@@ -5,8 +5,9 @@
   min-height: 100%;
   height: 100%;
   width: 100%;
-  background-color: #070707;
+  background-color: $black;
   background-image: url('/img/fsc-bg.jpg');
+  overflow: hidden;
 }
 .first-screen-container{
   align-content: space-between;
@@ -14,6 +15,10 @@
 .welcome-link{
   display: block;
   margin: 0 auto;
+  height: 17px;
+  & img{
+    max-height: 100%;
+  }
 }
 .welcome-arrow{
   width: 100%;

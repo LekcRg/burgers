@@ -7,6 +7,7 @@
   <title>MrBurger - Мы делаем натуральные бургеры</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="./css/main.css">
+   <!-- "-?d+px" -->
 </head>
 <body>
   <div class="wrapper">
@@ -14,31 +15,32 @@
       <div class="container first-screen-container">
         <header class="header">
           <div class="logo">
-            <img src="img/icons/logo.svg" alt="logo MrBurger">
+            <img class="logo__img" src="img/icons/logo.svg" alt="logo MrBurger">
           </div>
-          <nav class="header__nav-wrapper">
-            <ul class="header__nav">
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">О нас</a>
+          <nav class="nav__wrapper">
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="#" class="nav__link">О нас</a>
               </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Бергеры</a>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Бургеры</a>
               </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Команда</a>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Команда</a>
               </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Меню</a>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Меню</a>
               </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Отзывы</a>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Отзывы</a>
               </li>
-              <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Контакты</a>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
               </li>
             </ul>
           </nav>
           <div class="header__do-order"><a href="#" class="red-btn">Заказать</a></div>
+          <a class="hamburger__menu"></a>
         </header>
         <div class="promo">
           <div class="promo__img">
@@ -59,29 +61,41 @@
 
     <section class="best screen">
       <div class="container">
-        <h2 class="big-text">Мы лучшие</h2>
+        <h2 class="big-text big-text__center big-text__black">Мы лучшие</h2>
         <ul class="best__list">
           <li class="best__item">
-            <img src="img/icons/meat.svg" alt="" class="best__img">
-            <h3 class="best__name">100% свежее мясо</h3>
-            <p class="best__description">
-              Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-            </p>
+            <div class="best__img-wrapper">
+              <img src="img/icons/meat.svg" alt="" class="best__img">
+            </div>
+            <div class="best__text">
+              <h3 class="best__name">100% свежее мясо</h3>
+              <p class="best__description">
+                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+              </p>
+            </div>
           </li>
           <li class="best__item">
-            <img src="img/icons/hand.svg" alt="" class="best__img">
-            <h3 class="best__name">Ручная сборка</h3>
-            <p class="best__description">
-              Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский
-              пафос.
-            </p>
+            <div class="best__img-wrapper">
+              <img src="img/icons/hand.svg" alt="" class="best__img">
+            </div>
+            <div class="best__text">
+              <h3 class="best__name">Ручная сборка</h3>
+              <p class="best__description">
+                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский
+                пафос.
+              </p>
+            </div>
           </li>
           <li class="best__item">
-            <img src="img/icons/natural.svg" alt="" class="best__img">
-            <h3 class="best__name">Натуральные ингредиенты</h3>
-            <p class="best__description">
-              Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-            </p>
+            <div class="best__img-wrapper">
+              <img src="img/icons/natural.svg" alt="" class="best__img">
+            </div>
+            <div class="best__text">
+              <h3 class="best__name">Натуральные ингредиенты</h3>
+              <p class="best__description">
+                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+              </p>
+            </div>
           </li>
         </ul>
       </div>
@@ -89,10 +103,10 @@
 
     <section class="team screen">
       <div class="team__wrapper">
-        <h2 class="big-text">Команда</h2>
+        <h2 class="big-text team__title">Команда</h2>
         <ul class="acardeon">
           <li class="acardeon__list">
-            <h4 class="acardeon__name">Дэниэл Редклиф</h4>
+            <a href="#" class="acardeon__name">Дэниэл Редклиф</a>
             <div class="acardeon__open">
               <div class="acardeon__photo" style="background-image: url(img/team-photo.jpg)">
                 <img src="img/team-photo.jpg" alt="">
@@ -104,7 +118,7 @@
             </div>
           </li>
           <li class="acardeon__list acardeon__active">
-            <h4 class="acardeon__name">Ричард Джеймс</h4>
+            <a href="#" class="acardeon__name">Ричард Джеймс</a>
             <div class="acardeon__open">
               <div class="acardeon__photo" style="background-image: url(img/team-photo.jpg)">
                 <img src="img/team-photo.jpg" alt="">
@@ -116,7 +130,7 @@
             </div>
           </li>
           <li class="acardeon__list">
-            <h4 class="acardeon__name">Джейк Финн</h4>
+            <a href="#" class="acardeon__name">Джейк Финн</a>
             <div class="acardeon__open">
               <div class="acardeon__photo" style="background-image: url(img/team-photo.jpg)">
                 <img src="img/team-photo.jpg" alt="">
@@ -128,7 +142,7 @@
             </div>
           </li>
           <li class="acardeon__list">
-            <h4 class="acardeon__name">Николай Иванов</h4>
+            <a href="#" class="acardeon__name">Николай Иванов</a>
             <div class="acardeon__open">
               <div class="acardeon__photo" style="background-image: url(img/team-photo.jpg)">
                 <img src="img/team-photo.jpg" alt="">
@@ -141,6 +155,54 @@
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="menu screen">
+      <h2 class="big-text menu__title big-text__white">Меню</h2>
+      <ul class="menu__list">
+        <li class="menu__item menu__item-active">
+          <div class="menu__item-wrapper item-meet">
+            <a href="#" class="menu__item-title">Для мясоедов</a>
+          </div>
+          <div class="menu__text-wrapper">
+            <p class="menu__text">
+              Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+              Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+              механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает
+              метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+              сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+            </p>
+          </div>
+        </li>
+        <li class="menu__item">
+          <div class="menu__item-wrapper item-grass">
+            <a href="#" class="menu__item-title">Вегетариагское</a>
+          </div>
+          <div class="menu__text-wrapper">
+            <p class="menu__text">
+              Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+              Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+              механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает
+              метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+              сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+            </p>
+          </div>
+        </li>
+        <li class="menu__item">
+          <div class="menu__item-wrapper item-feet">
+            <a href="#" class="menu__item-title">Диетическая</a>
+          </div>
+          <div class="menu__text-wrapper">
+            <p class="menu__text">
+              Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+              Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако
+              механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает
+              метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+              сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+            </p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="reviews screen">
@@ -234,9 +296,94 @@
           </div>
         </li>
       </ul>
+    </section> 
+ 
+    <section class="form screen">
+      <div class="container">
+        <h2 class="big-text big-text__center">Закажите доставку</h2>
+        <form class="form__delivery">
+          <div class="form__column">
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__title">Имя</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__title">Телефон</span>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__title">Улица</span>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__title">Дом</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__title">Корпус</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label">
+                <span class="form__title">Квартира</span>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__label form__hide-phone">
+                <span class="form__title">Этаж</span>
+                <input type="text" class="form__input">
+              </label>
+            </div>
+          </div>
+          <div class="form__column">
+            <div class="form__row">
+              <label class="form__label">
+                <span class="form__title">Комментарий</span>
+                <textarea class="form__textarea"></textarea>
+              </label>
+            </div>
+            <div class="form__row form__center radio__wrapper">
+              <label class="radio__label">
+                <input class="form__radio" type="radio" name="money">
+                <div class="input__radio"></div>
+                <span class="form__title">Потребуется сдача</span>
+              </label>
+              <label class="radio__label">
+                <input class="form__radio" type="radio" name="money">
+                <div class="input__radio"></div>
+                <span class="form__title">Оплата картой</span>
+              </label>
+            </div>
+            <div class="form__row form__center">
+              <label class="radio__label">
+                <input type="checkbox" class="form__checkbox">
+                <div class="checkbox"></div>
+                <span class="form__title">Не перезванивать</span>
+              </label>
+            </div>
+            <div class="form__row form__center">
+              <input class="red-btn form__btn" type="submit" value="Заказать">
+              <input class="form__btn form__clear"type="reset" value="Очистить">
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
-
     
+    <section class="geo screen">
+      <div id="map" class="geo__map"></div>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__text">
+            <span class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
+            <span class="footer__tel">+7 (812) 377-13-77</span>
+          </div>
+        </div>
+      </footer>
+    </section>
   </div>
 
   <ul class="points">
@@ -251,5 +398,6 @@
   </ul>
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="./js/app.min.js"></script>
 </html>

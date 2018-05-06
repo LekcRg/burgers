@@ -1,15 +1,20 @@
-@mixin circle($width){
-  width: $width;
-  height: $width;
-  border-radius: 50%;
+@function rem($px){
+  @return $px / 16px + 0rem;
 }
 
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
 }
 
-@mixin rem($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
 }
