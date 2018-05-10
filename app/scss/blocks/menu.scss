@@ -36,7 +36,7 @@
     left: 10%;
   }
   &__item-title{
-    font-size: 40px;
+    font-size: rem(40px);
     text-decoration: none;
     color: #fff;
     font-family: 'Gagalin';
@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 80px;
+    width: rem(80px);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

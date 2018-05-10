@@ -2,9 +2,9 @@
   display: flex;
   justify-content: stretch;
   flex-direction: column;
+  position: relative;
   &__map{
     width: 100%;
-    height: auto;
     flex: 1;
   }
 }
