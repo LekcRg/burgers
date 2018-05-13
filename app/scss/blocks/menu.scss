@@ -23,6 +23,7 @@
       }
       & .menu__text-wrapper{
         width: 550px;
+        transition: width .2s ease-out;
         @include tablets{
           width: auto;
           flex: 1;

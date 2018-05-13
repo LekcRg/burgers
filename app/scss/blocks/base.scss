@@ -25,6 +25,9 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
+a{
+  text-decoration: none;
+}
 h2{
   font-weight: normal;
 }
@@ -50,16 +53,18 @@ section{
 }
 .container{
   max-width: 980px;
+  width: 100%;
   padding: 0 20px;
-  min-height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  position: relative;
 }
 .screen{
+  position: relative;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,6 +90,7 @@ section{
   font-family: 'Gagalin';
   color: $orange;
   font-size: rem(72px);
+  line-height: .95;
   @include phones {
     font-size: rem(63px);
   }
