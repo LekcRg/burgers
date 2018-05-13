@@ -1,0 +1,119 @@
+.arrow{
+  display: flex;
+  position: absolute;
+  top: 0;bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 100%;
+  align-items: center;
+  &__img{
+    max-width: 100%;
+  }
+  &__link{
+    display: flex;
+    height: 100px;
+    width: 100%;
+  }
+  &-left{
+    transform: rotate(180deg);
+    &__wrapper{
+      left: -20px;
+    }
+  }
+  &-right{
+    &__wrapper{
+      right: -20px;
+    }
+  }
+}
+.slider {
+  background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  &__container{
+    @include tablets{
+      flex-direction: column;
+      text-align: center;
+      padding: 0 10%;
+    }
+    @include phones{
+      padding: 0 3%;
+    }
+  }
+  &__composition{
+    background-color: rgba($red, .4);
+    top: 0;
+  }
+  &__kkal{
+    bottom: 0;
+  }
+  &__icon{
+    position: absolute;
+    left: 0;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 5px;
+    padding: rem(14px) 0;
+    text-align: center;
+    &-img{
+      max-width: rem(46px);
+    }
+    &-text{
+      color: #fff;
+      font-family: 'Gagalin';
+      font-size: rem(14px);
+      width: 100%;
+      display: block;
+    }
+  }
+  &__img{
+    max-width: 100%;
+    @include phones{
+      max-width: 90%;
+    }
+    &-wrapper{
+      width: 50%;
+      text-align: center;
+      @include tablets{
+        width: 100%;
+      }
+    }
+  }
+  &__text{
+    &-wrapper{
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      @include tablets{
+        width: 100%;
+        align-items: center;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__description{
+    color: #fff;
+    margin-top: rem(40px);
+    margin-bottom: rem(30px);
+    font-size: rem(14px);
+    @include tablets{
+      margin-top: rem(30px);
+    }
+  }
+  &__buy{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+  }
+  &__price, &__rub{
+    color: $red;
+  }
+  &__rub{
+    font-size: rem(30px);
+  }
+  &__btn{
+    margin-left: rem(30px);
+  }
+}
+
