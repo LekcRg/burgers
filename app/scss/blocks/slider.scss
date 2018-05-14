@@ -57,9 +57,26 @@
     top: 0;
   }
   &__kkal{
+    opacity: .5;
     bottom: 0;
+    position: relative;
+    transition: opacity .2s ease;
+    &:hover{
+      opacity: 1;
+    }
     @include tablets{
       right: 0;
+    }
+    &-text{
+      position: absolute;
+      top: 0;left: 0;right: 0;bottom: 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: 'Gagalin';
+      font-size: rem(20px);
     }
   }
   &__icon{
