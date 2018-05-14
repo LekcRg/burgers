@@ -18,11 +18,17 @@
     transform: rotate(180deg);
     &__wrapper{
       left: -20px;
+      @include phones{
+        left: -10px;
+      }
     }
   }
   &-right{
     &__wrapper{
       right: -20px;
+      @include phones{
+        right: -10px;
+      }
     }
   }
 }
@@ -37,8 +43,14 @@
       padding: 0 10%;
     }
     @include phones{
-      padding: 0 3%;
+      padding: 0 5%;
     }
+  }
+  &__wrapper{
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
   }
   &__composition{
     background-color: rgba($red, .4);
@@ -46,15 +58,20 @@
   }
   &__kkal{
     bottom: 0;
+    @include tablets{
+      right: 0;
+    }
   }
   &__icon{
     position: absolute;
-    left: 0;
     width: rem(90px);
     height: rem(90px);
     border-radius: 5px;
     padding: rem(14px) 0;
     text-align: center;
+    @include tablets{
+      top: rem(-85px);
+    }
     &-img{
       max-width: rem(46px);
     }
