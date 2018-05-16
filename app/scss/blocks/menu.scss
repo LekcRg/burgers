@@ -8,6 +8,9 @@
     font-size: rem(14px);
     padding: 10% 5%;
     line-height: 1.8;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    transition-delay: .3s;
   }
   &__list{
     display: flex;
@@ -21,9 +24,12 @@
       & .menu__item-title{
         color: $orange;
       }
+      & .menu__text{
+        opacity: 1;
+      }
       & .menu__text-wrapper{
         width: 550px;
-        transition: width .2s ease-out;
+        
         @include tablets{
           width: auto;
           flex: 1;
@@ -47,6 +53,7 @@
     width: 100%;
     align-items: center;
     display: flex;
+    transition: color .2s ease;
   }
   &__item-wrapper{
     display: flex;
@@ -71,6 +78,7 @@
     height: 100%;
     width: 0;
     background-color: rgba($black, .93);
+    transition: width .3s ease-out;
   }
 }
 
