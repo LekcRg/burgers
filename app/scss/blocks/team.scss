@@ -1,0 +1,128 @@
+.team{
+  background-image: url(../img/team-bg.jpg);
+  &__title{
+    margin: 0;padding: 0;
+    @include tablets{
+      text-align: center;
+    }
+  }
+  &__wrapper{
+    background: rgba($black, .9);
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    color: #fff;
+    padding: 10% 6%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    @include tablets{
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  & .team__title{
+    margin-bottom: 5%;
+  }
+}
+.acardeon{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &__open{
+    height: 0;
+    overflow: hidden;
+    font-size: rem(14px);
+    display: flex;
+    flex-wrap: nowrap;
+    @include tablets{
+      width: 100%;
+      padding: 0 25%;
+    }
+    @include phones{
+      padding: 0 5%;
+    }
+  }
+  &__photo{
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    & img{
+      display: none;
+    }
+  }
+  &__text{
+    margin-left: 3%;
+    @include tablets{
+      margin-left: 0;
+      margin-top: rem(20px);
+    }
+  }
+  &__job{
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__about{
+    line-height: 1.7;
+  }
+  &__list{
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 35px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include tablets{
+      padding-left: 0;
+    }
+  }
+
+  &__name{
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    @include tablets{
+      font-size: rem(25px);
+      margin: 0 auto;
+    }
+    &::before{
+        content: '';
+        margin: auto 0;
+        border: 5px solid transparent;
+        border-top: 8px solid $orange;
+        width: 0;
+        height: 0;
+        margin-right: 10px;
+      }
+    @include tablets{
+      text-align: center;
+    }
+  }
+  &__active{
+    & .acardeon__name{
+      color: $orange;
+    }
+    & .acardeon__open{
+      margin-top: 15px;
+      height: auto;
+      @include tablets{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    & .acardeon__name::before{
+      transform: rotate(180deg);
+    }
+  }
+}

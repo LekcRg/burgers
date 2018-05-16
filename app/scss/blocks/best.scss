@@ -2,34 +2,75 @@
   width: 100%;
   height: 100%;
   background-image: url('../img/best-bg.jpg');
+  & .big-text{
+    @include small{
+      margin-bottom: rem(10px);
+    }
+  }
   &__list{
     width: 100%;
     justify-content: space-between;
     display: flex;
+    flex-direction: row;
+    @include phones{
+      flex-direction: column;
+    }
   }
   &__item{
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    @include phones {
+      flex-direction: row;
+      margin-bottom: rem(25px);
+    }
+  }
+  &__text{
     text-align: center;
+    @include phones{
+      text-align: left;
+      width: 100%;
+      margin-left: rem(7px);
+    }
+    @include small{
+      font-size: rem(10px);
+    }
   }
   &__name{
     font-family: 'Lifehack';
-    @include rem(24px);
-    color: #2f3234;
-    margin-bottom: 25px;
+    font-size: rem(24px);
+    color: $black;
+    margin-bottom: rem(25px);
+    @include tablets{
+      margin-bottom: rem(20px);
+    }
+    @include phones {
+      margin-bottom: rem(10px);
+    }
+    @include small{
+      font-size: 1.4rem;
+    }
   }
   &__description{
     font-family: 'Ubuntu';
     font-weight: lighter;
-    color: rgba(#2f3234, .8);
-    line-height: 24px;
+    color: rgba($black, .8);
+    line-height: rem(24px);
+    font-size: rem(14px);
   }
   &__img{
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+    max-width: 100%;
+    max-height: 100%;
+    width: 100px;
+    &-wrapper {
+      margin: 0 auto;
+      height: 90px;
+      margin-bottom: rem(20px);
+      @include phones{
+        width: 30%;
+        margin-bottom: 0;
+      }
+    }
   }
-}
-.best .big-text{
-  margin-bottom: 50px;
-  text-align: center;
-  width: 100%;
-  color: #2f3234;
 }

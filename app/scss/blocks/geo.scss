@@ -1,0 +1,11 @@
+.geo{
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  position: relative;
+  &__map{
+    width: 100%;
+    flex: 1;
+  }
+}
+
