@@ -47,28 +47,44 @@ overlay.addEventListener('click', function (event) {
 });
 
 // Menu
-const menuItem = document.querySelectorAll('.menu__item');
-const menuTitle = document.querySelectorAll('.menu__item-title')
-const menuTextWrapper = document.querySelectorAll('.menu__text-wrapper')
-const menuText = document.querySelectorAll('.menu__text')
-// menuTextWrapper[1].style.width = '100px';
-for (let i = 0; i < menuItem.length; i++) {
-  menuTitle[i].addEventListener('click', function (event) {
+const menuTitle = document.querySelectorAll('.menu__item-title');
+
+menuTitle.forEach(function(element) {
+  element.addEventListener('click', function (event) {
     event.preventDefault();
-    if (menuItem[i].classList == 'menu__item') {
-      for (let j = 0; j < menuItem.length; j++) {
-        if (menuItem[j].classList == 'menu__item menu__item-active') {
-          menuTextWrapper[j].style.transitionDelay = '.3s';
-          menuItem[j].classList.remove('menu__item-active');
-          menuText[i].style.transitionDelay = '.6s';
-        }
-        menuItem[i].classList.add('menu__item-active');
+
+    menuItem = element.parentElement.parentElement;
+    menuItemClass = menuItem.classList;
+
+    const menuListChild = element.parentElement.parentElement.parentElement.childNodes;
+    const menuText = menuItem.childNodes[3].childNodes[1];
+    const menuTextWrapper = menuItem.childNodes[3];
+    let menuActiveText;
+    let menuActiveTextWrapper;
+
+    menuActive = document.querySelector('.menu__item-active');
+    if (menuActive == null) {
+      menuItemClass.add('menu__item-active');
+      menuTextWrapper.style.transitionDelay = '0s';
+      menuText.style.transitionDelay = '.3s';
+    }else {
+      if (!menuItemClass.contains('menu__item-active')) {
+        menuActiveText = menuActive.childNodes[3].childNodes[1];
+        menuActiveTextWrapper = menuActive.childNodes[3];
+
+        menuActiveText.style.transitionDelay = '0s';
+        menuActiveTextWrapper.style.transitionDelay = '.2s';
+
+        menuActive.classList.remove('menu__item-active');
+        menuItemClass.add('menu__item-active');
+        menuTextWrapper.style.transitionDelay = '.55s';
+        menuText.style.transitionDelay = '.9s';
+      }else {
+        menuTextWrapper.style.transitionDelay = '.2s';
+        menuText.style.transitionDelay = '0s';
+        menuItemClass.remove('menu__item-active');
       }
+      
     }
-    else if (menuItem[i].classList == 'menu__item menu__item-active') {
-      menuTextWrapper[i].style.transitionDelay = '.3s';
-      menuText[i].style.transitionDelay = '0s';
-      menuItem[i].classList.remove('menu__item-active');
-    }
-  });
-}
+  })
+});
