@@ -46,7 +46,34 @@ overlay.addEventListener('click', function (event) {
   }
 });
 
-// Menu
+// Acco team
+const accordionName = document.querySelectorAll('.accordion__name');
+
+accordionName.forEach(function (element) {
+  element.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    let accordionActive = document.querySelector('.accordion__active');
+    const accordionItem = element.parentElement;
+    let accordionItemClass = accordionItem.classList;
+    let accordionActiveText;
+    if (accordionActive == null) {
+      accordionItemClass.add('accordion__active');
+    }else {
+      if (!accordionItemClass.contains('accordion__active')) {
+        accordionActive.classList.remove('accordion__active');
+        accordionItemText = accordionItem.childNodes[3];
+        accordionItemText.style.transitionDelay = '.15s';
+        console.log(accordionItem.style);
+        accordionItemClass.add('accordion__active');
+      } else {
+        accordionItemClass.remove('accordion__active');
+      }
+    }
+  })
+});
+
+// Acco menu
 const menuTitle = document.querySelectorAll('.menu__item-title');
 
 menuTitle.forEach(function(element) {
@@ -77,8 +104,8 @@ menuTitle.forEach(function(element) {
 
         menuActive.classList.remove('menu__item-active');
         menuItemClass.add('menu__item-active');
-        menuTextWrapper.style.transitionDelay = '.55s';
-        menuText.style.transitionDelay = '.9s';
+        menuTextWrapper.style.transitionDelay = '.2s';
+        menuText.style.transitionDelay = '.5s';
       }else {
         menuTextWrapper.style.transitionDelay = '.2s';
         menuText.style.transitionDelay = '0s';
