@@ -47,14 +47,21 @@ section{
   }
 }
 .wrapper{
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.maincontant{
+  height: 100%;
+  width: 100%;
+  will-change: transform;
+  transition: transform .6s ease;
 }
 .container{
   max-width: 980px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 rem(20px);
   margin: 0 auto;
   display: flex;
   justify-content: center;
