@@ -1,0 +1,9 @@
+.orientation{
+  position: fixed;
+  display: none;
+  background-color: rgba($black, .98);
+  text-align: center;
+  .big-text {
+    line-height: 1.1;
+  }
+}
