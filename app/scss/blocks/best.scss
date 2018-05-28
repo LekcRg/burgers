@@ -67,9 +67,6 @@
       margin: 0 auto;
       height: 90px;
       margin-bottom: rem(20px);
-      & svg {
-        max-height: 100%;
-      }
       @include phones{
         width: 30%;
         margin-bottom: 0;

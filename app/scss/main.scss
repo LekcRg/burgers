@@ -1,10 +1,10 @@
-@import "variables";
+@import "fonts";
 
 @import "mixin";
 
-@import "fonts";
+@import "variables";
 
-@import 'blocks/svg';
+@import 'svg';
 
 @import "blocks/base";
 
@@ -35,5 +35,3 @@
 @import 'blocks/slider';
 
 @import "blocks/overlay-nav";
-
-@import 'blocks/modal';

@@ -14,9 +14,9 @@
 }
 .welcome-link{
   display: block;
-  margin: auto;
-  height: rem(16px);
-  & svg{
+  margin: 0 auto;
+  height: 17px;
+  & img{
     max-height: 100%;
   }
 }

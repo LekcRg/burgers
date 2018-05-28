@@ -24,7 +24,7 @@ function init() {
   myMap.controls.remove('typeSelector');
 }
 
-//Hamburger menu ;)
+//Hamburger menu
 const hamburgerMenu = document.querySelector('#hamburger-nav');
 const overlay = document.querySelector('.overlay');
 const close = document.querySelector('.overlay__close');
@@ -114,6 +114,7 @@ menuTitle.forEach(function(element) {
       
     }
   })
+<<<<<<< HEAD
 });
 
 // Slider
@@ -353,3 +354,6 @@ function submitForm(event) {
     console.log(msg.mes);
   });
 }
+=======
+});
+>>>>>>> parent of e146e75... a lot of new options

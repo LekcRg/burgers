@@ -2,12 +2,6 @@
   @return $px / 16px + 0rem;
 }
 
-@mixin big {
-  @media screen and (max-width: $big) {
-    @content;
-  }
-}
-
 @mixin phones {
   @media screen and (max-width: $phones) {
     @content;
