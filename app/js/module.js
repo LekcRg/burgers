@@ -197,6 +197,7 @@ $('.menu__item-title').on('click', function (event) {
   })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> a059d7c538aedfb47e1f656f62e14794581a6349
@@ -541,3 +542,6 @@ if (device.mobile()) {
   });
 }
 >>>>>>> a059d7c538aedfb47e1f656f62e14794581a6349
+=======
+});
+>>>>>>> parent of e146e75... a lot of new options

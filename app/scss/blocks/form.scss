@@ -5,6 +5,7 @@
   font-size: 14px;
 <<<<<<< HEAD
   align-items: center;
+<<<<<<< HEAD
 =======
   @media screen and (max-height: 400px){
     align-items: flex-start;
@@ -18,6 +19,8 @@
     } 
   }
 >>>>>>> a059d7c538aedfb47e1f656f62e14794581a6349
+=======
+>>>>>>> parent of e146e75... a lot of new options
   &__hide-phone{
     @include phones{
       display: none;
