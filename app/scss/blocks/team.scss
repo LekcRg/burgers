@@ -26,16 +26,17 @@
     margin-bottom: 5%;
   }
 }
-.acardeon{
+.accordion{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   &__open{
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     font-size: rem(14px);
     display: flex;
     flex-wrap: nowrap;
+    transition: max-height .3s ease, margin .3s ease;
     @include tablets{
       width: 100%;
       padding: 0 25%;
@@ -103,25 +104,27 @@
         width: 0;
         height: 0;
         margin-right: 10px;
+        transition: transform .3s ease;
       }
     @include tablets{
       text-align: center;
     }
   }
   &__active{
-    & .acardeon__name{
+    & .accordion__name{
       color: $orange;
     }
-    & .acardeon__open{
-      margin-top: 15px;
-      height: auto;
+    & .accordion__open{
+      margin-top: rem(15px);
+      max-height: 350px;
+      transition: max-height .3s ease, margin .3s ease;
       @include tablets{
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
     }
-    & .acardeon__name::before{
+    & .accordion__name::before{
       transform: rotate(180deg);
     }
   }

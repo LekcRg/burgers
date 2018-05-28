@@ -3,7 +3,17 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
-  align-items: center;
+  @media screen and (max-height: 400px){
+    align-items: flex-start;
+  }
+  & .big-text {
+    @include small{
+      font-size: rem(38px);
+    }
+    @include phones {
+      font-size: rem(39px);
+    } 
+  }
   &__hide-phone{
     @include phones{
       display: none;

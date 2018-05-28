@@ -43,35 +43,3 @@
     }
   }
 }
-.hamburger__menu{
-  display: none;
-  margin-left: rem(30px);
-  height: 4px;
-  width: 24px;
-  border-radius: 2px;
-  background: #fff;
-  position: relative;
-  &::before{
-    position: absolute;
-    top: -8px;
-    display: block;
-    content: '';
-    height: 4px;
-    width: 24px;
-    border-radius: 2px;
-    background: #fff;
-  }
-  &::after{
-    position: absolute;
-    top: 8px;
-    display: block;
-    content: '';
-    height: 4px;
-    width: 24px;
-    border-radius: 2px;
-    background: #fff;
-  }
-  @include tablets{
-    display: block;
-  }
-}

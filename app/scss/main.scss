@@ -1,8 +1,10 @@
-@import "fonts";
+@import "variables";
 
 @import "mixin";
 
-@import "variables";
+@import "fonts";
+
+@import 'blocks/svg';
 
 @import "blocks/base";
 
@@ -29,3 +31,13 @@
 @import "blocks/footer";
 
 @import "blocks/geo";
+
+@import 'blocks/slider';
+
+@import "blocks/overlay-nav";
+
+@import 'blocks/modal';
+
+@import 'blocks/msg-modal';
+
+@import 'blocks/orientation';

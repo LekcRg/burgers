@@ -1,4 +1,5 @@
 .footer{
+  display: flex;
   height: 58px;
   width: 100%;
   position: absolute;
@@ -7,8 +8,15 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  align-items: center;
+  @include phones{
+    height: 115px;
+  }
   &__container{
-    justify-content: flex-start;
+    @include phones{
+      flex-direction: column;
+      text-align: center;
+    }
   }
   &__text{
     width: 50%;
@@ -18,13 +26,17 @@
     font-size: rem(14px);
   }
   &__tel{
-    color: $orange;
+    margin-top: rem(10px);
+    color: $red;
     font-weight: bold;
     font-size: rem(14px);
-    display: flex;
-    align-items: center;
+    display: block;
+    @include phones{
+      margin-bottom: rem(15px);
+    }
     &::before{
       content: '';
+      display: inline-flex;
       width: 12px;
       height: 11px;
       background-image: url(../img/icons/phone.svg);
@@ -33,5 +45,30 @@
       background-repeat: no-repeat;
       margin-right: rem(8px);
     }
+  }
+}
+.social{
+  margin-left: auto;
+  @include phones{
+    margin-left: 0;
+  }
+  &__link{
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    margin-left: rem(20px);
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover .social__svg{
+      fill: #fff;
+    }
+  }
+  &__svg{
+    fill: #575757;
+    max-width: 100%;
+    max-height: 100%;
+    transition: fill .2s ease;
   }
 }

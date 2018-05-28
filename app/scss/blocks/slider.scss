@@ -1,0 +1,243 @@
+.arrow{
+  display: flex;
+  position: absolute;
+  top: 0;bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 100%;
+  align-items: center;
+  &__img{
+    max-width: 100%;
+  }
+  &__link{
+    display: flex;
+    height: 100px;
+    width: 100%;
+  }
+  &-left{
+    transform: rotate(180deg);
+    &__wrapper{
+      left: -20px;
+      @include big{
+        left: 5px;
+      }
+    }
+  }
+  &-right{
+    &__wrapper{
+      right: -20px;
+      @include big{
+        right: 5px;
+      }
+    }
+  }
+}
+.slider {
+  background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  &__list{
+    @include tablets{
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+  }
+  &__list {
+    white-space: nowrap;
+    position: relative;
+    transition: left .7s ease-out;
+    left: 0;
+    &-wrapper{
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+  &__item {
+    width: 100%;
+    display: inline-flex;
+    white-space: normal;
+    position: relative;
+    @include tablets{
+      flex-direction: column;
+      
+    }
+  }
+  &__composition{
+    background-color: rgba($red, .4);
+    top: 0;
+    transition: background .2s ease-out;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba($red, 1);
+    }
+    &:hover + .dropdown {
+      transition-delay: 0ms;
+      width: rem(270px);
+      padding: rem(18px) rem(22px);
+    }
+    &:hover + .dropdown > .dropdown__list{
+      transition-delay: .3s;
+      opacity: 1;
+    }
+  }
+  &__kkal{
+    opacity: .5;
+    bottom: 0;
+    position: absolute;
+    transition: opacity .2s ease;
+    &:hover{
+      opacity: 1;
+    }
+    @include tablets{
+      right: 0;
+    }
+    &-text{
+      position: absolute;
+      top: 0;left: 0;right: 0;bottom: 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: 'Gagalin';
+      font-size: rem(20px);
+    }
+  }
+  &__icon{
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 5px;
+    padding: rem(14px) 0;
+    text-align: center;
+    @include tablets{
+      top: 0;
+    }
+    &-img{
+      max-width: rem(46px);
+    }
+    &-text{
+      color: #fff;
+      font-family: 'Gagalin';
+      font-size: rem(14px);
+      width: 100%;
+      display: block;
+    }
+  }
+  &__img{
+    max-width: 100%;
+    @include phones{
+      max-width: 80%;
+    }
+    &-wrapper{
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      @include tablets{
+        width: 100%;
+      }
+    }
+  }
+  &__text{
+    &-wrapper{
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      @include tablets{
+        width: 100%;
+
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__description{
+    color: #fff;
+    margin-top: rem(40px);
+    margin-bottom: rem(30px);
+    font-size: rem(14px);
+    @include tablets{
+      margin-top: rem(30px);
+    }
+  }
+  &__buy{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+  }
+  &__price, &__rub{
+    color: $red;
+  }
+  &__rub{
+    font-size: rem(30px);
+  }
+  &__btn{
+    margin-left: rem(30px);
+  }
+}
+.slider__composition{
+  display: inline-block;
+  vertical-align: top;
+  &-wrapper{
+    white-space: nowrap;
+    font-size: 0;
+    text-align: left;
+  }
+}
+.slider__img-icon{
+  position: absolute;
+  width: rem(90px);
+  height: 100%;
+  left: 0;
+  top: 0;
+  @include tablets{
+    height: auto;
+    width: 100%;
+  }
+}
+.dropdown {
+  width: 0;
+  background: rgba(#fff, .9);
+  z-index: 9999;
+  border-radius: 5px;
+  left: rem(90px);
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  transition: width .4s ease, padding .4s ease;
+  transition-delay: .4s;
+  &:hover{
+    transition-delay: 0ms;
+    width: rem(270px);
+    padding: rem(18px) rem(22px);
+  }
+  &:hover .dropdown__list{
+    opacity: 1;
+  }
+  .slider__img-icon &:hover ~ .slider__composition{
+    background-color: rgba($red, 1);
+  }
+  &__list{
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+  &__item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  &__img-wrapper{
+    height: 100%;
+    width: rem(45px);
+    margin-right: rem(25px);
+  }
+  &__ingr{
+    font-weight: bold;
+    font-size: rem(14px);
+  }
+  &__gramm{
+    margin-left: auto;
+    font-size: rem(14px);
+  }
+}
