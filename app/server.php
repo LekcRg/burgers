@@ -15,8 +15,11 @@
   <html lang="en">
   <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+=======
+>>>>>>> a059d7c538aedfb47e1f656f62e14794581a6349
     <title>Document</title>
   </head>
   <body>

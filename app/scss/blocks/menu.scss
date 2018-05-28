@@ -15,10 +15,13 @@
     display: flex;
     z-index: 2;
     margin-left: auto;
+    left: 0;
+    transition: transform .2s ease-out;
   }
   &__item{
     height: 100%;
     display: flex;
+    position: relative;
     &-active{
       & .menu__item-title{
         color: $orange;
@@ -29,10 +32,10 @@
       & .menu__text-wrapper{
         width: 550px;
         
-        @include tablets{
-          width: auto;
-          flex: 1;
-        }
+        // @include tablets{
+        //   width: auto;
+        //   flex: 1;
+        // }
       }
     }
   }
