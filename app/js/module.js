@@ -290,6 +290,33 @@ $('.welcome-link').on('click', function (event) {
 });
 
 // reviews popup
+function createModal(text, head) {
+  const modalBg = $('<div>', { class: 'modal__bg' });
+  const modal = $('<div>', { class: 'modal' });
+  const modalText = $('<p>', { class: 'reviews__text modal__text' });
+  const modalClose = $('<a>', {
+    class: 'overlay__close modal__close',
+    href: '#'
+  });
+  $('body').append(modalBg.append(modal));
+  modalBg.fadeIn(500);
+  modalText.text(text);
+  modal.append(head);
+  modal.append(modalText);
+  modal.append(modalClose);
+
+  modalBg.on('click', function (event) {
+    ourTarget = event.target;
+    if ($(ourTarget).hasClass('modal__bg')) {
+      modalBg.fadeOut(500, () => modalBg.remove());
+    }
+  })
+  modalClose.on('click', function (ev) {
+    ev.preventDefault();
+    modalBg.fadeOut(500, () => modalBg.remove());
+  })
+}
+
 let reviewsText = 'Мысли все о них и о них, о них и о них. Нельзя устоять, ' +
 'невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, ' +
 'котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о ' +
@@ -301,31 +328,28 @@ $('.reviews__btn').on('click', function (event) {
   const textWrapper = $this.closest('.reviews__item-text');
   const reviewsName = textWrapper.find('.reviews__name').clone();
   
-
-  const modalBg = $('<div>', { class: 'modal__bg' });
-  const modal =     $('<div>', { class: 'modal' });
-  const modalText = $('<p>', { class: 'reviews__text modal__text' });
-  const modalClose = $('<a>', {
-    class: 'overlay__close modal__close', 
-    href: '#'
-  });
-  $('body').append(modalBg.append(modal));
-  modalBg.fadeIn(500);
-  modalText.text(reviewsText);
-  modal.append(reviewsName);
-  modal.append(modalText);
-  modal.append(modalClose);
-  
-  modalBg.on('click', function (event) {
-    ourTarget = event.target;
-    if ($(ourTarget).hasClass('modal__bg')){
-      modalBg.fadeOut(500, () => modalBg.remove());
-    }
-  })
-  modalClose.on('click', function (ev) {
-    ev.preventDefault();
-    modalBg.fadeOut(500, () => modalBg.remove());
-  })
-  
+  createModal(reviewsText, reviewsName);
 });
 
+// Form
+
+$('.form__delivery').on('submit', submitForm);
+
+function submitForm(event) {
+  event.preventDefault();
+  let form = $(event.target),
+      data = form.serialize(),
+      url = form.attr('action'),
+      type = form.attr('methode');
+
+  ajaxForm = $.ajax({
+    url: url,
+    dataType: 'json',
+    data: data,
+    success: console.log()
+  });
+  
+  ajaxForm.done(function(msg) {
+    console.log(msg.mes);
+  });
+}

@@ -528,40 +528,40 @@
       <section class="form screen">
         <div class="container">
           <h2 class="big-text big-text__center">Закажите доставку</h2>
-          <form class="form__delivery">
+          <form class="form__delivery" action="server.php" method="post" id="do-order">
             <div class="form__column">
               <div class="form__row">
                 <label class="form__label">
                   <span class="form__title">Имя</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="name">
                 </label>
                 <label class="form__label">
                   <span class="form__title">Телефон</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="phone">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__label">
                   <span class="form__title">Улица</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="street">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__label">
                   <span class="form__title">Дом</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="house">
                 </label>
                 <label class="form__label">
                   <span class="form__title">Корпус</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="part">
                 </label>
                 <label class="form__label">
                   <span class="form__title">Квартира</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="appart">
                 </label>
                 <label class="form__label form__hide-phone">
                   <span class="form__title">Этаж</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="floor">
                 </label>
               </div>
             </div>
@@ -569,30 +569,30 @@
               <div class="form__row">
                 <label class="form__label">
                   <span class="form__title">Комментарий</span>
-                  <textarea class="form__textarea"></textarea>
+                  <textarea class="form__textarea" name="comment"></textarea>
                 </label>
               </div>
               <div class="form__row form__center radio__wrapper">
                 <label class="radio__label">
-                  <input class="form__radio" type="radio" name="money">
+                  <input class="form__radio" type="radio" name="money" value="Сдача">
                   <div class="input__radio"></div>
                   <span class="form__title">Потребуется сдача</span>
                 </label>
                 <label class="radio__label">
                   <input class="form__radio" type="radio" name="money">
-                  <div class="input__radio"></div>
+                  <div class="input__radio" value="Оплата картой"></div>
                   <span class="form__title">Оплата картой</span>
                 </label>
               </div>
               <div class="form__row form__center">
                 <label class="radio__label">
-                  <input type="checkbox" class="form__checkbox">
+                  <input type="checkbox" class="form__checkbox" name="call">
                   <div class="checkbox"></div>
                   <span class="form__title">Не перезванивать</span>
                 </label>
               </div>
               <div class="form__row form__center">
-                <input class="red-btn form__btn" type="submit" value="Заказать">
+                <button class="red-btn form__btn" type="submit">Заказать</button>
                 <input class="form__btn form__clear"type="reset" value="Очистить">
               </div>
             </div>
