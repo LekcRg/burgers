@@ -82,61 +82,6 @@ accordionName.forEach(function (element) {
 });
 
 // Acco menu
-// const menuTitle = document.querySelectorAll('.menu__item-title');
-// console.log($(window).width());
-
-// menuTitle.forEach(function(element) {
-//   element.addEventListener('click', function (event) {
-//     event.preventDefault();
-
-//     menuItem = element.parentElement.parentElement;
-//     menuItemClass = menuItem.classList;
-
-//     const menuListChild = element.parentElement.parentElement.parentElement.childNodes;
-//     const menuText = menuItem.childNodes[3].childNodes[1];
-//     const menuTextWrapper = menuItem.childNodes[3];
-//     let menuActiveText;
-//     let menuActiveTextWrapper;
-
-//     function bigWidth() {
-//       console.log('asdf')
-//       if ($(window).width() < 768) {
-//         menuTextWrapper.style.width = '100px';
-//       }
-//     }
-//     function smallWidth() {
-//       menuTextWrapper.style.width = '';
-//     }
-
-//     menuActive = document.querySelector('.menu__item-active');
-//     if (menuActive == null) {
-//       menuItemClass.add('menu__item-active');
-//       bigWidth();
-//       menuTextWrapper.style.transitionDelay = '0s';
-//       menuText.style.transitionDelay = '.3s';
-//     }else {
-//       if (!menuItemClass.contains('menu__item-active')) {
-//         menuActiveText = menuActive.childNodes[3].childNodes[1];
-//         menuActiveTextWrapper = menuActive.childNodes[3];
-
-
-//         menuActiveText.style.transitionDelay = '0s';
-//         menuActiveTextWrapper.style.transitionDelay = '.2s';
-
-//         menuActive.classList.remove('menu__item-active');
-//         menuItemClass.add('menu__item-active');
-//         menuTextWrapper.style.transitionDelay = '.2s';
-//         menuText.style.transitionDelay = '.5s';
-//       }else {
-//         menuTextWrapper.style.transitionDelay = '.2s';
-//         menuText.style.transitionDelay = '0s';
-//         menuItemClass.remove('menu__item-active');
-//       }
-//     }
-//   })
-// });
-
-
 
 $('.menu__item-title').on('click', function (event) {
   event.preventDefault();
